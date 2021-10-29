@@ -1,4 +1,5 @@
-import { GetServerSideProps, GetStaticProps } from "next";
+/* eslint-disable @next/next/no-img-element */
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import { SubscribeButton } from "../components/SubscribeButton";
 import { stripe } from "../services/stripe";
@@ -17,7 +18,6 @@ export default function Home({ product }: HomeProps) {
     <>
       <Head>
         <title>Home | ig.news</title>
-
       </Head>
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
