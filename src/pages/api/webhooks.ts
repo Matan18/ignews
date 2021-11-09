@@ -78,5 +78,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 
 
-  res.status(200).json({ received: true });
+  return res.status(200).json({ received: true });
 }

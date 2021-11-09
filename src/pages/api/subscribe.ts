@@ -21,9 +21,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const session = await getSession({ req })
     if (session === null) throw new Error("Ocorreu um erro na sessão");
-    console.log({ session });
 
-    const email = session?.user?.email || 'mateusandriola18@gmail.com';
+    const email = session?.user?.email;
 
     const user = await fauna.query<User>(
       q.Get(
